@@ -1,0 +1,19 @@
+/* Add this CSS to your component's CSS file or style block */
+.d3-tree-base-node-circle {
+    fill: lightgrey !important;
+}
+
+.d3-tree-link-path:hover {
+    stroke: none !important;
+}
+
+/* Optional: Adjust the tooltip styling */
+.tooltip {
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 8px;
+    border-radius: 4px;
+    font-size: 12px;
+}
+
+
