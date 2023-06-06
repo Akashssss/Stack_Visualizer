@@ -1,11 +1,11 @@
 export class Tree {
-    static data = new Array()
+    // static data = new Array()
     #children = [];
     #parent = null;
     #name;
     #arguments = [];
     dat = [] 
-
+    treeHistory = []
 
     constructor(name) {
         this.#name = name;
@@ -76,26 +76,26 @@ export class Tree {
     }
 
 
-    static dataPrint(node, obj) {
+    // static dataPrint(node, obj) {
 
-        let NodeData =
-        {
-            name: node.name,
-            arguments: node.arguments.join(" , "),
-            children: []
-        };
-        obj.push(NodeData)
+    //     let NodeData =
+    //     {
+    //         name: node.name,
+    //         arguments: node.arguments.join(" , "),
+    //         children: []
+    //     };
+    //     obj.push(NodeData)
 
-        for (let child of node.childern) {
-            Tree.dataPrint(child, obj[obj.length - 1].children)
-        }
+    //     for (let child of node.childern) {
+    //         Tree.dataPrint(child, obj[obj.length - 1].children)
+    //     }
 
-    }
+    // }
 
-    static getJsonTree(node, obj) {
-        Tree.dataPrint(node, obj)
-        return JSON.stringify(Tree.data)
-    }
+    // static getJsonTree(node, obj) {
+    //     Tree.dataPrint(node, obj)
+    //     return JSON.stringify(Tree.data)
+    // }
 
 
     datPrint( obj ) { 
@@ -112,14 +112,19 @@ export class Tree {
         }
 
     }
-    getJsonDat(node, obj) {
+
+
+    getJsonDat(node, obj ,his ) {
         obj.push({
             name: node.name,
-            arguments: node.arguments.join(" , "),
-            children: []
+            arguments: JSON.stringify(node.arguments),
+            children: [] ,
         });
+
+        const s = JSON.stringify(this.dat) ; 
+        his.push( JSON.parse(s)) ; 
         for (let child of node.childern) {
-            this.getJsonDat(child, obj[obj.length - 1].children)
+            this.getJsonDat(child, obj[obj.length - 1].children ,his)
 
         }
     }

@@ -2,3 +2,60 @@
 @tailwind components;
 @tailwind utilities;
 
+
+
+@import 'tailwindcss/utilities';
+*{
+    margin:0 ;
+    padding: 0 ; 
+    box-sizing: border-box;
+}
+
+
+
+/* Works on Firefox */
+* {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(151, 151, 151, 0.303) rgba(42, 42, 42, 0.136);
+}
+
+/* Works on Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+}
+
+*::-webkit-scrollbar-track {
+    background: rgba(42, 42, 42, 0.136);
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: rgba(151, 151, 151, 0.303);
+    border-radius: 10px;
+}
+
+
+.dark-mode {
+    background-color: rgb(79, 81, 95);
+    
+}
+.dark-mode  textarea {
+ background-color: rgb(38, 40, 43);
+ color : whitesmoke ;
+ border :1px solid rgb(78, 78, 78) ;
+--tw-shadow-color: #363646;
+    --tw-shadow: var(--tw-shadow-colored);
+}
+.dark-mode label {
+     color : rgb(7, 236, 7) 
+}
+
+.tooltip {
+color: whitesmoke ;
+ background-color: #505050;
+ margin: 2rem ;
+
+}
+
+
+
