@@ -92,7 +92,8 @@ function App() {
         <div className='w-full my-6 '>
           <label className="ml-2 text-pink-500 font-semibold text-lg items-center flex  text-center" htmlFor="functionName">Function Definition : </label>
           <textarea
-            placeholder='function functionName( arg1 , arg2 ,...)\n{function def ...}'
+            placeholder={`function functionName( arg1 , arg2 ,...)
+            {function def ...}`}
             value={funDef}
             onChange={(e) => { setFunDef(e.target.value) }}
             name="userFunction"
