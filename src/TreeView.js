@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import Tree from 'react-d3-tree';
 
 const MindmapComponent = ({ data }) => {
- console.log( data)
+//  console.log( data)
     const [tooltip, setTooltip] = useState(null);
 
     const nodeClickHandler = (nodeData) => {
@@ -19,7 +19,7 @@ const MindmapComponent = ({ data }) => {
 
     }) => { 
         const { name } = nodeDatum;
-        console.log(nodeDatum.arguments)
+        // console.log(nodeDatum.arguments)
         const isLeafNode = !nodeDatum.children || nodeDatum.children.length === 0;
         const circleRadius = isLeafNode ? 8 : 12;
         const circleFill = isLeafNode ? 'white' : nodeColor;

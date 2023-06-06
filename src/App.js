@@ -23,7 +23,7 @@ function App() {
     var obj = functionRunner( code , call ) ; 
    
 
-    console.log(obj)
+    // console.log(obj)
 
 
      for (let i = 0 ; i<obj.utilityFunctions.length ;i++ )
@@ -36,16 +36,13 @@ function App() {
 
   let utilityFunctions = obj.utilityFunctions ; 
   // console.log( utilityFunctions)
-
-
-
 // console.log( userFunction) ;
 // console.log(call)
-   console.log("() function " + obj.userFunction[0].declaration + ' {' + obj.userFunction[0].code + '} ') ; 
+  //  console.log("() function " + obj.userFunction[0].declaration + ' {' + obj.userFunction[0].code + '} ') ; 
     if(obj.userFunction[0])
     {
      const a =  eval("( function " + obj.userFunction[0].declaration + ' {' + obj.userFunction[0].code + '} )');
-    console.log(a)
+    // console.log(a)
       eval("a" + call.substring(call.indexOf("(")))
     }
 
@@ -77,7 +74,7 @@ function App() {
           e.preventDefault(); functionRun(funDef, funCall); 
 }}>
         <div className='w-full my-6 px-'>
-          <label className="ml-2  text-green-600 items-center flex  text-center font-semibold text-lg" htmlFor="functionName">Function Name : </label>
+          <label className="ml-2  text-green-600 items-center flex  text-center font-semibold text-lg"  id='functionName'>Function Name : </label>
           <textarea
             value={funCall}
             onChange={(e) => { setfunCall(e.target.value) }}
@@ -90,7 +87,7 @@ function App() {
        
 
         <div className='w-full my-6 '>
-          <label className="ml-2 text-pink-500 font-semibold text-lg items-center flex  text-center" htmlFor="functionName">Function Definition : </label>
+          <label className="ml-2 text-pink-500 font-semibold text-lg items-center flex  text-center"  id='functionDef'>Function Definition : </label>
           <textarea
             placeholder={`function functionName( arg1 , arg2 ,...)
             {function def ...}`}

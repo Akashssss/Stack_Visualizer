@@ -11,13 +11,13 @@ const SubData = def.slice(openingBracketIndex, closingBracketIndex);
 
 const newSubData = subString1 + SubData + subString2;
 var temperory_tree = tree;
-console.log(def)
+// console.log(def)
 def = def.substring(0, openingBracketIndex + 1) + newSubData + def.substring(closingBracketIndex);
-console.log(def)
+// console.log(def)
 const a = eval("(" + def + ")");
-console.log(a)
+// console.log(a)
 eval("a" + passedArgs)
-console.log(call)
+// console.log(call)
 
 
 

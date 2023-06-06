@@ -44,7 +44,7 @@ export default function MyTreeComponent({ dataArray ,colr}) {
                         <input
                             type="range"
                             id="interval-range"
-                            min="500"
+                            min="100"
                             max="4000"
                             step="100"
                             value={intervalTime}

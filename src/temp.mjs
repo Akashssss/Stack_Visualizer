@@ -13,7 +13,7 @@ let obj ;
 if( match )
 {
     obj = parseFunction(code, match[1]); 
-    console.log( obj ) ; 
+    // console.log( obj ) ; 
 
 }
 
